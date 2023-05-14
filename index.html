@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player</title>
+  <meta name="description" content="reproductor de vídeo">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="input-video">
+    <h3>Carga tu vídeo para reproducirlo abajo</h3>
+    <input type="file" name="video" id="videoFile" onchange="handleFileSelect(event)"/>
+    <output id="list"></output>
+    
+    <div class="cargando-video" id="spinner">
+      <div class='spinner'></div>
+      <span class="spinner-spam">Cargando vídeo</span>
+    </div>
+    <div>
+      <video id="video" controls poster="	https://cdn.pixabay.com/photo/2012/11/04/08/23/cinema-strip-64074_1280.jpg" width="620">
+        <track label="Español" kind="subtitles" srclang="es" src="subtituloses.vtt" default>
+        El reproductor que estás usando no permite reproducir este contenido,
+        puedes descargarlo en
+        <a href="https://archive.org/details/BigBuckBunny_124"></a>
+      </video>
+    </div>
+    
+    <div>
+      <button onclick="playVideo()">Reproducir</button>
+      <button onclick="pauseVideo()">Pausa</button>
+      <button onclick="turnUpVolume()">Subir Volumen</button>
+      <button onclick="turnDownVolume()">Bajar Volumen</button>
+    </div>
+  </div>
+  
+
+  <script src="main.js" async defer></script>
+</body>
+</html>
